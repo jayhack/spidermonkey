@@ -1,0 +1,15 @@
+{
+  "enabled": true,
+  "continuous": false,
+  "timeoutMs": 15000,
+  "monitors": {
+    "dives": {
+      "mode": "lexical",
+      "on": ["read_file", "search"],
+      "hops": 2, "perHop": 1, "candidates": 8,
+      "threshold": 0.5, "followThreshold": 0.5,
+      "maxChars": 6000, "viewLines": 60, "minViewLines": 1, "previewLines": 24,
+      "maxHopsPerTask": 16, "tests": true
+    }
+  }
+}

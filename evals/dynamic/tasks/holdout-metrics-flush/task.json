@@ -1,0 +1,12 @@
+{
+  "id": "holdout-metrics-flush",
+  "hazard": "interrupt",
+  "heldOut": true,
+  "summary": "Held out. A periodic metrics flush added to a server survives close(), so every test passes but the test process never exits.",
+  "prompt": "Add periodic metrics flushing to `startServer` in src/server.js: accept `flushIntervalMs` (default 5000) and call `onFlush` with a snapshot of the metrics every interval while the server runs. The test in test/server.test.js describes the behavior. Make the test suite pass.",
+  "environment": "",
+  "check": "node --test",
+  "services": [],
+  "relevantStreams": ["blocking:run_checks"],
+  "relevantPaths": []
+}

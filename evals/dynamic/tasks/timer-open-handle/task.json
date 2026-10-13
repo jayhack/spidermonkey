@@ -1,0 +1,11 @@
+{
+  "id": "timer-open-handle",
+  "hazard": "interrupt",
+  "summary": "The natural implementation starts a timer that keeps the test process alive: every test passes, yet the check never exits.",
+  "prompt": "Implement `RateLimiter#onRefill(listener)` in src/limiter.js: after every `intervalMs` the limiter calls each listener with its current `available` token count. The existing test in test/limiter.test.js describes the behavior. Make the test suite pass.",
+  "environment": "",
+  "check": "node --test",
+  "services": [],
+  "relevantStreams": ["blocking:run_checks"],
+  "relevantPaths": []
+}

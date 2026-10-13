@@ -1,0 +1,8 @@
+{
+  "enabled": true, "hz": 1, "threshold": 0.85,
+  "skipUnchanged": true, "rankCandidates": true, "targetMode": "relevance",
+  "candidates": 8, "observationCount": 2, "observationChars": 1600,
+  "toolOutputChars": 3000, "boardChars": 8000, "reflexBudget": 4,
+  "reflexChain": 1, "maxFrames": 16,
+  "instructions": "Read the implicated implementation and directly relevant tests. Stop once those are covered. deliveredPaths are already available to the executive. Do not collect unrelated modules. After an edit, wait for executive verification."
+}

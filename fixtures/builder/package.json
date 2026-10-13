@@ -1,0 +1,10 @@
+{
+  "name": "ros-harness-builder-agent",
+  "private": true,
+  "type": "module",
+  "description": "Eve executive for the Spidermonkey web-app demo: builder tools plus a native Spidermonkey tool",
+  "dependencies": {
+    "eve": "^0.68.0",
+    "zod": "^4.6.5"
+  }
+}

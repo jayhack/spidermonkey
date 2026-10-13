@@ -1,0 +1,14 @@
+node_modules/
+.env*
+!.env.example
+.eve/
+.vercel/
+.output/
+.ros/
+dist/
+*.log
+*.tsbuildinfo
+.venv/
+__pycache__/
+.claude/worktrees/
+.claude/launch.json

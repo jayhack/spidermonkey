@@ -1,0 +1,6 @@
+[
+  { "name": "heartbeat", "every": "15s" },
+  { "name": "flush-metrics", "every": "30sec" },
+  { "name": "sync-users", "every": "5m" },
+  { "name": "rotate-logs", "every": "1h" }
+]

@@ -1,0 +1,4 @@
+{
+  "enabled": true, "continuous": false, "builder": true, "followUps": 1, "timeoutMs": 20000,
+  "monitors": { "spidermonkey": { "intervalMs": 2000, "callsPerMinute": 20, "appraiser": "system1" } }
+}

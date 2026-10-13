@@ -1,0 +1,67 @@
+{
+  "name": "@jayhack/spidermonkey",
+  "version": "0.1.0",
+  "description": "A coding agent with an always-on System 1 that watches your machine while it works",
+  "type": "module",
+  "bin": {
+    "spidermonkey": "bin/spidermonkey.js"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "!src/**/*.test.ts",
+    "fixtures/builder/agent/",
+    "fixtures/builder/package.json",
+    "evals/profiles/spidermonkey.json",
+    "README.md"
+  ],
+  "keywords": [
+    "agent",
+    "coding-agent",
+    "system-1",
+    "eve",
+    "ai-gateway"
+  ],
+  "author": "Jay Hack",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jayhack/spidermonkey.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "packageManager": "pnpm@10.28.1",
+  "scripts": {
+    "start": "tsx src/cli.ts",
+    "demo": "tsx src/cli.ts --demo --replay",
+    "demo:live": "tsx src/cli.ts --demo",
+    "auth": "tsx src/auth.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test test/*.test.ts",
+    "eve:dev": "eve dev --host 127.0.0.1 --no-default-extensions",
+    "eve:build": "eve build --skip-sandbox-prewarm",
+    "test:chat": "tsx --test test/integration/*.test.ts",
+    "eval:prepare": "uv run --project evals python evals/modal_runner.py --prepare-only",
+    "eval:run": "uv run --project evals python evals/modal_runner.py",
+    "eval:test": "uv run --project evals python -m unittest discover -s evals -p 'test_*.py'",
+    "spidermonkey": "tsx src/spidermonkey/cli.ts",
+    "demo:web": "tsx src/cli.ts --web"
+  },
+  "dependencies": {
+    "ai": "^7.0.123",
+    "eve": "^0.68.0",
+    "tsx": "^4.23.15",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.3",
+    "typescript": "^7.0.2"
+  },
+  "homepage": "https://github.com/jayhack/spidermonkey#readme",
+  "bugs": {
+    "url": "https://github.com/jayhack/spidermonkey/issues"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "id": "hung-suite",
+  "hazard": "interrupt",
+  "summary": "A pre-existing test spins forever at 100% CPU, so the executive's own check hangs until something stops it.",
+  "prompt": "Some tests in this repository fail. Fix `slugify` in src/slug.js so it strips diacritics (\"Crème Brûlée\" becomes \"creme-brulee\"), and make the whole test suite pass.",
+  "environment": "",
+  "check": "node --test",
+  "services": [],
+  "relevantStreams": ["blocking:run_checks"],
+  "relevantPaths": []
+}

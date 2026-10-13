@@ -1,0 +1,8 @@
+{
+  "enabled": true, "hz": 2, "threshold": 0.7,
+  "skipUnchanged": true, "rankCandidates": true,
+  "candidates": 12, "observationCount": 2, "observationChars": 2000,
+  "toolOutputChars": 4000, "boardChars": 12000, "reflexBudget": 12,
+  "reflexChain": 2, "maxFrames": 48,
+  "instructions": "Prefer source or tests implicated by a concrete symbol, traceback or path. After reading an implementation, read its relevant test or helper. Do not read unrelated documentation. A failed check already visible to the executive does not need repeated escalation. Wait when the board supplies enough evidence for the executive's next edit."
+}

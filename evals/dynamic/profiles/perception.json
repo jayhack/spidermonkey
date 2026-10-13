@@ -1,0 +1,22 @@
+{
+  "enabled": true,
+  "continuous": false,
+  "timeoutMs": 15000,
+  "monitors": {
+    "perception": {
+      "appraiser": "system1",
+      "threshold": 0.5,
+      "escalateAt": 2,
+      "interruptAt": 0.55,
+      "maxAppraisals": 60,
+      "minSeverity": "warn",
+      "logs": { "paths": ["logs/*.log", "queue/*.jsonl"], "everyMs": 1000, "maxLines": 40 },
+      "processes": { "everyMs": 3000 },
+      "blocking": { "everyMs": 2000, "patienceSeconds": 8 },
+      "settleMs": 5000
+    }
+  },
+  "deliverWaitMs": 0,
+  "followUps": 1,
+  "monitorTickMs": 1000
+}

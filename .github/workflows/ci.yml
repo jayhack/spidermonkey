@@ -1,0 +1,22 @@
+name: checks
+on: [push, pull_request]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm typecheck
+      - run: pnpm test
+      - run: pnpm exec eve info --json
+        env:
+          EVE_TELEMETRY_DISABLED: '1'
+      - run: pnpm demo --plain
+        timeout-minutes: 3
+      - run: pnpm test:chat
+        timeout-minutes: 3

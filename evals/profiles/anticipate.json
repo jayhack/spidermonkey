@@ -1,0 +1,25 @@
+{
+  "enabled": true,
+  "continuous": false,
+  "timeoutMs": 15000,
+  "monitors": {
+    "dives": {
+      "mode": "system1",
+      "on": [
+        "read_file",
+        "search"
+      ],
+      "hops": 2,
+      "perHop": 1,
+      "candidates": 12,
+      "threshold": 0.8,
+      "followThreshold": 0.3,
+      "maxChars": 6000,
+      "viewLines": 60,
+      "minViewLines": 1,
+      "previewLines": 24,
+      "maxHopsPerTask": 16,
+      "tests": true
+    }
+  }
+}

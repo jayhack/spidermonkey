@@ -1,0 +1,11 @@
+{
+  "id": "slow-healthy-suite",
+  "hazard": "no-interrupt",
+  "summary": "Distractor for the interrupt reflex: a time-boxed 15 s soak test is silent and CPU-bound but healthy; stopping it wastes work.",
+  "prompt": "Update `tokenize` in src/tokenize.js: lowercase every token and strip leading and trailing punctuation, keeping inner apostrophes and hyphens (\"Don't\" becomes \"don't\", \"state-of-the-art,\" becomes \"state-of-the-art\"). Drop tokens that become empty. Add tests.",
+  "environment": "",
+  "check": "node --test",
+  "services": [],
+  "relevantStreams": [],
+  "relevantPaths": []
+}

@@ -1,0 +1,7 @@
+{
+  "enabled": true, "hz": 2, "threshold": 0.85,
+  "skipUnchanged": false, "rankCandidates": false,
+  "candidates": 24, "observationCount": 4, "observationChars": 4000,
+  "toolOutputChars": 8000, "boardChars": 16000, "reflexBudget": 8,
+  "reflexChain": 0, "maxFrames": 96
+}

@@ -1,0 +1,8 @@
+{
+  "enabled": true, "hz": 1, "threshold": 0.7,
+  "skipUnchanged": true, "rankCandidates": true,
+  "candidates": 8, "observationCount": 2, "observationChars": 1600,
+  "toolOutputChars": 3000, "boardChars": 6000, "reflexBudget": 4,
+  "reflexChain": 1, "maxFrames": 32,
+  "instructions": "Read the implementation implicated by the issue, then its relevant test or helper. Stop once those are covered. deliveredPaths are already available to the executive, so do not fetch extra context without a concrete new failure. After an edit, let the executive verify. Do not read documentation, example apps, or unrelated modules."
+}

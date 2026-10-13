@@ -1,0 +1,12 @@
+{
+  "enabled": true,
+  "continuous": false,
+  "timeoutMs": 15000,
+  "router": {
+    "fast": "openai/gpt-6-luna",
+    "strong": "openai/gpt-6-sol",
+    "mode": "system1",
+    "threshold": 0.5,
+    "rate": 0.3
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "enabled": true,
+  "continuous": false,
+  "timeoutMs": 15000,
+  "monitors": {
+    "perception": {
+      "appraiser": "deliver-all",
+      "threshold": 0.5,
+      "escalateAt": 2,
+      "commands": [
+        {
+          "name": "tests",
+          "command": "$CHECK",
+          "on": [
+            "start",
+            "edit"
+          ],
+          "debounceMs": 400,
+          "timeoutMs": 120000,
+          "serveRunChecks": true
+        }
+      ]
+    }
+  },
+  "deliverWaitMs": 120000,
+  "followUps": 1
+}

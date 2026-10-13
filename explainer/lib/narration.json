@@ -1,0 +1,44 @@
+{
+  "duration": 34.2,
+  "voice": {
+    "name": "Sterling",
+    "id": "dc382508-c8bd-443c-8cb2-46e57b8d2e6f"
+  },
+  "music": "Minimal modern electronic underscore for a short tech explainer. Soft pulsing synth arpeggio, warm analog pads, a light kick and hi-hat entering after four seconds, steady 112 BPM, curious and optimistic, builds gently, resolves cleanly at the end. Instrumental, no vocals.",
+  "lines": [
+    {
+      "at": 0.3,
+      "text": "Spidermonkey. A System 1 for coding agents.",
+      "caption": false
+    },
+    {
+      "at": 3.5,
+      "text": "A coding agent works one step at a time."
+    },
+    {
+      "at": 8.2,
+      "text": "But a computer is live and chaotic, and every tool call adds to it."
+    },
+    {
+      "at": 12.8,
+      "text": "Polling all of it would eat every step the agent has."
+    },
+    {
+      "at": 16.9,
+      "text": "Like a brain, Spidermonkey uses a System 1 to find order in the chaos."
+    },
+    {
+      "at": 22.2,
+      "text": "It steers the agent’s attention to what matters."
+    },
+    {
+      "at": 25.4,
+      "text": "An interrupt when it’s stuck. A note on its next result."
+    },
+    {
+      "at": 30.1,
+      "text": "Spidermonkey. Always-on System 1 for coding agents.",
+      "caption": false
+    }
+  ]
+}

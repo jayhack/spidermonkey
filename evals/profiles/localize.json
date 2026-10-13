@@ -1,0 +1,6 @@
+{
+  "enabled": true, "continuous": false, "timeoutMs": 15000,
+  "localize": { "files": 24, "expandFiles": 2, "fileThreshold": 0.3, "perFile": 24, "previewLines": 40,
+    "threshold": 0.5, "floor": 0.2, "budgetChars": 6000, "maxChunks": 4,
+    "testFiles": 8, "testPerFile": 16, "testThreshold": 0.4, "testBudgetChars": 2000, "testMaxChunks": 1 }
+}

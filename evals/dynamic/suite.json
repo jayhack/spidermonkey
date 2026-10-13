@@ -1,0 +1,19 @@
+{
+  "executiveModel": "openai/gpt-6-luna",
+  "executiveReasoning": "low",
+  "timeoutSeconds": 420,
+  "maxSteps": 40,
+  "maxCostUsd": 0.25,
+  "checkTimeoutSeconds": 90,
+  "servicesWarmupMs": 2000,
+  "environmentSuffix": "Keep the running services healthy.",
+  "pollingInstructions": "Monitoring duty: the harness started background processes that write logs under logs/ and queues under queue/. After each edit, and again before your final answer, read the end of those files (read_file reports totalLines; read the last lines) and check whether your change caused errors, crashes, restarts, stalls, or growing resource use. Address anything your change caused.",
+  "arms": {
+    "executive-only": { "profile": "executive-only.json", "description": "Executive alone; the environment is described but it is never told to watch it." },
+    "polling": { "profile": "executive-only.json", "poll": true, "servicesOnly": true, "description": "System 2 does it all: executive told to poll logs and queues itself after each edit." },
+    "perception": { "profile": "perception.json", "description": "Always-on sensors with System 1 (Jev) appraisal, escalation and interrupts." },
+    "deliver-all": { "profile": "perception.json", "appraiser": "deliver-all", "description": "Same sensors; every novel observation delivered, no escalation or interrupts." },
+    "deliver-none": { "profile": "perception.json", "appraiser": "deliver-none", "description": "Same sensors; nothing delivered (cost and interference control)." },
+    "rules": { "profile": "perception.json", "appraiser": "rules", "description": "Same sensors and routing; keyword/threshold alerts and a no-output watchdog instead of a decision model." }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "enabled": true,
+  "continuous": false,
+  "timeoutMs": 15000,
+  "monitors": {
+    "perception": {
+      "appraiser": "system1",
+      "threshold": 0.5,
+      "escalateAt": 2,
+      "commands": [
+        {
+          "name": "tests",
+          "command": "$CHECK",
+          "on": [
+            "start",
+            "edit"
+          ],
+          "debounceMs": 400,
+          "timeoutMs": 120000,
+          "serveRunChecks": true
+        }
+      ],
+      "grounding": {
+        "mode": "system1",
+        "maxLocations": 2,
+        "context": 12,
+        "threshold": 0.3
+      }
+    }
+  },
+  "deliverWaitMs": 120000,
+  "followUps": 1
+}

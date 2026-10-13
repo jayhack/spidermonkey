@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <!-- What the SWE-bench evals found. Numbers: docs/experiments/perception-study.md
+       (Luna: watch2-sync pooled over luna-watch-v2 and -v3; Sol: sol61-stack-v2) and
+       docs/experiments/dynamic-world.md (live environments, GPT-6.1 Sol). -->
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  </style>
+  <rect width="1600" height="900" fill="#000000"/>
+
+  <text x="100" y="128" font-size="54" font-weight="800" fill="#f4f1e8" letter-spacing="-1.4">On SWE-bench, System 1 trims a weaker model’s steps.</text>
+  <text x="100" y="196" font-size="54" font-weight="800" fill="#a3a3a3" letter-spacing="-1.4">It doesn’t help a strong one.</text>
+
+  <rect x="100" y="250" width="680" height="270" rx="10" fill="#07131c" stroke="#2fd6ff" stroke-opacity="0.45" stroke-width="2"/>
+  <text x="140" y="312" font-size="32" font-weight="700" fill="#2fd6ff">GPT-6 Luna</text>
+  <text x="140" y="430" font-size="112" font-weight="800" fill="#2fd6ff" letter-spacing="-3">−10% steps</text>
+  <text x="140" y="484" font-size="27" fill="#d4d4d4">same solves · replicated over 42 attempts</text>
+
+  <rect x="820" y="250" width="680" height="270" rx="10" fill="#0d0d0d" stroke="#404040" stroke-width="2"/>
+  <text x="860" y="312" font-size="32" font-weight="700" fill="#d4d4d4">GPT-6.1 Sol</text>
+  <text x="860" y="430" font-size="112" font-weight="800" fill="#737373" letter-spacing="-3">no gain</text>
+  <text x="860" y="484" font-size="27" fill="#d4d4d4">same solves · 21% slower</text>
+
+  <g font-size="25">
+    <text x="100" y="600" fill="#737373" font-weight="600">Model</text>
+    <text x="440" y="600" fill="#737373" font-weight="600">Solves: agent alone → with System 1</text>
+    <text x="1010" y="600" fill="#737373" font-weight="600">Steps</text>
+    <text x="1250" y="600" fill="#737373" font-weight="600">Wall time</text>
+    <line x1="100" y1="622" x2="1500" y2="622" stroke="#404040" stroke-width="1.5"/>
+
+    <text x="100" y="672" fill="#f4f1e8" font-weight="700">GPT-6 Luna</text>
+    <text x="440" y="672" fill="#f4f1e8" class="mono">18/42 → 18/42</text>
+    <text x="1010" y="672" fill="#2fd6ff" class="mono" font-weight="700">−10%</text>
+    <text x="1250" y="672" fill="#d4d4d4" class="mono">≈ same</text>
+    <line x1="100" y1="696" x2="1500" y2="696" stroke="#262626" stroke-width="1.5"/>
+
+    <text x="100" y="746" fill="#f4f1e8" font-weight="700">GPT-6.1 Sol</text>
+    <text x="440" y="746" fill="#f4f1e8" class="mono">28/42 → 28/42</text>
+    <text x="1010" y="746" fill="#d4d4d4" class="mono">−1%</text>
+    <text x="1250" y="746" fill="#ff3b30" class="mono">+21%</text>
+  </g>
+
+  <text x="100" y="822" font-size="21" fill="#a3a3a3"><tspan fill="#f97316" font-weight="700">Where it does help:</tspan> live environments. Hung test runs ended after ~15 s instead of 90 (−54%) on GPT-6.1 Sol, with no false interrupts.</text>
+  <text x="100" y="860" font-size="19" fill="#737373">7 SWE-bench Lite dev tasks · paired, interleaved runs · System 1: a tests watcher + the Jev decision model</text>
+  <text x="1500" y="860" font-size="19" fill="#737373" text-anchor="end" class="mono">github.com/jayhack/spidermonkey</text>
+</svg>

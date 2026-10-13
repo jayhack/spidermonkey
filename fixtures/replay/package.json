@@ -1,0 +1,10 @@
+{
+  "name": "ros-harness-replay-fixture",
+  "private": true,
+  "type": "module",
+  "description": "Deterministic, credential-free Eve fixture for the cart demo",
+  "dependencies": {
+    "eve": "^0.68.0",
+    "zod": "^4.6.5"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "dataset": "SWE-bench/SWE-bench_Lite",
+  "split": "test",
+  "train": [
+    "pallets__flask-4045",
+    "pallets__flask-5063",
+    "pytest-dev__pytest-11143",
+    "pytest-dev__pytest-7373",
+    "pytest-dev__pytest-8365",
+    "pytest-dev__pytest-7490",
+    "pytest-dev__pytest-5221"
+  ],
+  "holdout": [],
+  "checks": {
+    "psf/requests": "source /opt/miniconda3/bin/activate testbed && python -m pytest -q test_requests.py",
+    "pallets/flask": "source /opt/miniconda3/bin/activate testbed && python -m pytest -q -W ignore::DeprecationWarning tests",
+    "pytest-dev/pytest": "source /opt/miniconda3/bin/activate testbed && python -m pytest -q testing/test_assertrewrite.py"
+  },
+  "timeoutSeconds": 240,
+  "gradeTimeoutSeconds": 300,
+  "maxSteps": 24,
+  "maxCostUsd": 1.0,
+  "reasoning": "low",
+  "costWeightSecondsPerDollar": 30,
+  "failurePenaltySeconds": 900,
+  "sandboxPricing": {
+    "asOf": "2026-09-30",
+    "source": "https://modal.com/pricing",
+    "coreUsdPerSecond": 3.942e-05,
+    "gibUsdPerSecond": 6.67e-06
+  },
+  "executiveModel": "openai/gpt-6-sol",
+  "instanceChecks": {
+    "pytest-dev__pytest-7373": "source /opt/miniconda3/bin/activate testbed && python -m pytest -q testing/test_mark.py",
+    "pytest-dev__pytest-8365": "source /opt/miniconda3/bin/activate testbed && python -m pytest -q testing/test_tmpdir.py",
+    "pytest-dev__pytest-7490": "source /opt/miniconda3/bin/activate testbed && python -m pytest -q testing/test_skipping.py",
+    "pytest-dev__pytest-5221": "source /opt/miniconda3/bin/activate testbed && python -m pytest -q testing/python/fixtures.py",
+    "pytest-dev__pytest-7432": "source /opt/miniconda3/bin/activate testbed && python -m pytest -q testing/test_skipping.py",
+    "pytest-dev__pytest-7168": "source /opt/miniconda3/bin/activate testbed && python -m pytest -q testing/io/test_saferepr.py",
+    "pytest-dev__pytest-5692": "source /opt/miniconda3/bin/activate testbed && python -m pytest -q testing/test_junitxml.py",
+    "pytest-dev__pytest-9359": "source /opt/miniconda3/bin/activate testbed && python -m pytest -q testing/code/test_source.py"
+  }
+}
